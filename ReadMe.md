@@ -1,4 +1,4 @@
-<h2>FakeNews </h2>
+![](https://i.imgur.com/1yMpzuI.png)
 
 Coordinator : <b> Asist. drd. Cusmuliuc Ciprian </b>
 
