@@ -1,4 +1,4 @@
-<h2>FakeNews <h2/>
+<h2>FakeNews </h2>
 
 Coordinator : Cusmuliuc Ciprian
 
