@@ -19,7 +19,7 @@ Team :
     - gmail : robertandrei.miron@gmail.com
   
 5. Susan Stefan Claudiu (Scrum master)
-    - email :
+    - email : stefan.susan1@info.uaic.ro
 <br/>
 <p>The purpose of this project is to detect fake news from any website. It can be divided in two major parts : </p>
 <ol>
