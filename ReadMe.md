@@ -15,7 +15,8 @@ Team :
     - gmail : bianca.chirica@gmail.com
   
 4. Miron Robert Andrei
-    - email :
+    - email : robert.miron1@info.uaic.ro
+    - gmail : robertandrei.miron@gmail.com
   
 5. Susan Stefan Claudiu (Scrum master)
     - email :
