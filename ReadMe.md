@@ -5,7 +5,7 @@ Coordinator : <b> Cusmuliuc Ciprian </b>
 Team :
 
 1. Bardita Ioana Larisa 
-    - email : 
+    - gmail : barditalarisa99@gmail.com
   
 2. Chisa Daniel
     - email :
