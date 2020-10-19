@@ -1,6 +1,6 @@
 <h2>FakeNews </h2>
 
-Coordinator : <b> Cusmuliuc Ciprian </b>
+Coordinator : <b> Asist. drd. Cusmuliuc Ciprian </b>
 
 Team :
 
