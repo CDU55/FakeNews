@@ -1,4 +1,4 @@
-For the first part, news filtering, we will be divided in three teams that will :
+The first part, news filtering, will be divided in three major parts :
 1. Create the Google Plugin. (Chisa Daniel)
-2. Process the text in a form suitable to be used by the algorithm. (Miron Robert Andrei & )
-3. Create the ML algorithm that will decide if an article is news or not. (2 persons)
+2. Process the text in a form suitable to be used by the algorithm. (Miron Robert Andrei & Bardita Ioana Larisa)
+3. Create the ML algorithm that will decide if an article is news or not. (Susan Stefan Claudiu & Chirica Demetra Bianca)
