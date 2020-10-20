@@ -1,3 +1,4 @@
-For the first part, news filtering, we will be divided in two teams that will :
-1. Create the Google Plugin.
-2. Create the ML algorithm that will decide if an article is news or not.
+For the first part, news filtering, we will be divided in three teams that will :
+1. Create the Google Plugin. (1 person)
+2. Process the text in a form suitable to be used by the algorithm. (2 persons)
+3. Create the ML algorithm that will decide if an article is news or not. (2 persons)
