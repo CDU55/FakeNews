@@ -26,3 +26,5 @@ Team :
 <li>Detecting and differentiate news from other articles on the client side to be sent to the server.</li>
 <li> Deciding if the news if fake or not, based on multiple criterias. This operations being done on a server.</li>
 </ol>
+
+Resources : https://drive.google.com/drive/u/0/folders/17Kpf2yqUQSq0VmAO-qUcdpk9kOkq8ZvX
