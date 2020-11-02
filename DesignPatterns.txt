@@ -6,5 +6,4 @@ Server Side Component
 3. Facade provides a simplified interface to a large body of code.
 4. Proxy provides a placeholder for another object to control access, reduce cost, and reduce complexity.
 5. Singleton restricts object creation for a class to only one instance.
-6. Adapter allows classes with incompatible interfaces to
-work together
+6. Adapter allows classes with incompatible interfaces to work together.
