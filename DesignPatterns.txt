@@ -7,3 +7,5 @@ Server Side Component
 4. Proxy provides a placeholder for another object to control access, reduce cost, and reduce complexity.
 5. Singleton restricts object creation for a class to only one instance.
 6. Adapter allows classes with incompatible interfaces to work together.
+7. Iterator is uset for iterating through sentences and words 
+8. Strategy allows us to select an algorithm while the application is running
