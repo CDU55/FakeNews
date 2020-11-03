@@ -9,3 +9,8 @@ Server Side Component
 6. Adapter allows classes with incompatible interfaces to work together.
 7. Iterator is uset for iterating through sentences and words 
 8. Strategy allows us to select an algorithm while the application is running
+
+Plugin Component
+1. Observer provides update for objects in server side that need to be notified about changes of the web page states.
+2. Mediator coordinates interactions between server side and client side(plugin).
+
