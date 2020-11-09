@@ -1,4 +1,5 @@
-import DataSetProvider
+from DataLayer import DataSetProvider
+
 
 class DataSetAdapter:
     def __init__(self):

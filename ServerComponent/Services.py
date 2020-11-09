@@ -1,5 +1,5 @@
-from Factories import SocialMediaAnalysersFactory, NewsAnalysersFactory
-from Models import AnalysisResult
+from Analysers.Factories import SocialMediaAnalysersFactory, NewsAnalysersFactory
+from Analysers.Models import AnalysisResult
 
 
 class AnalysisService:

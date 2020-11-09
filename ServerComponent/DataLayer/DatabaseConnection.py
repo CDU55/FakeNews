@@ -1,6 +1,9 @@
+import sqlite3
+import os
+
 
 class DatabaseConnection:
-    __instance = None
+    __instance = sqlite3.connect(os.path.join("..", "Dataset", "dataset.db"))
 
     @staticmethod
     def getInstance():
