@@ -4,6 +4,8 @@ import time
 from bs4 import BeautifulSoup
 import re
 
+from twitter_scraper import Profile
+
 url = 'http://web.mta.info/developers/turnstile.html'
 protv = 'https://incont.stirileprotv.ro/joburi-romania/cum-se-va-desfasura-telemunca-si-munca-la-domiciliu-si-cum-se-schimba-programul-de-lucru-noi-reglementari.html?_ga=2.18512444.441552134.1604862638-837112706.1604862638'
 fblink = 'https://www.facebook.com/PresedinteleTraianBasescu/posts/3918068968206625'
@@ -43,4 +45,10 @@ def getDataFromTwitter(url):
     return data
 
 # TESTING FOR TWITTER GetData
-print(getDataFromTwitter(badea))
+# print(getDataFromTwitter(badea))
+
+def getTwitterProfile():
+    pass
+    #work in progress
+
+
