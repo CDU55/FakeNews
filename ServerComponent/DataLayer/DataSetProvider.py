@@ -1,3 +1,5 @@
+import os
+
 from DataLayer import DataSetEntry, DatabaseConnection
 from DataLayer.DataSetEntry import SocialMediaDataSetEntry
 
@@ -14,19 +16,15 @@ class DataSetProvider:
 
     def add_data_set_entry(self, entry: SocialMediaDataSetEntry):
         conn = DatabaseConnection.DatabaseConnection.getInstance()
-        cursor = conn.cursor()
-        id = cursor.execute('SELECT MAX(Id) FROM SocialMediaPosts').fetchone()
-        query="INSERT INTO SocialMediaPosts VALUES (1,'{}','{}','{}','{}','{}',{})".format( entry.followers_number,
-                                                                                          entry.likes_number,
-                                                                                          entry.comments_number,
-                                                                                          entry.spelling, entry.length,
-                                                                                          entry.label)
-        cursor.execute(query)
+        id = conn.execute('SELECT MAX(Id) FROM SocialMediaPosts').fetchone()[0]
+        params = (
+            id + 1, entry.followers_number, entry.likes_number, entry.comments_number, entry.spelling, entry.length,
+            entry.label)
+        query = "INSERT INTO SocialMediaPosts VALUES (?,?,?,?,?,?,?)"
+        conn.execute(query, params)
+        conn.commit()
 
     def get_data_set_entries(self):
-        pass
+        conn = DatabaseConnection.DatabaseConnection.getInstance()
+        return conn.execute("Select * FROM SocialMediaPosts")
 
-
-provider = DataSetProvider()
-element = SocialMediaDataSetEntry("High", "VeryHigh", "Medium", "Good", "Long", 1)
-provider.add_data_set_entry(element)
