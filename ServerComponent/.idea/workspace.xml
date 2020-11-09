@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb6c3092-f239-4e60-b03c-394791997dd2" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,10 +19,14 @@
   </component>
   <component name="ProjectId" id="1jkJ3io7LaPaDAdS3kPYeQdejlN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Dataset" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -37,19 +40,7 @@
       <recent name="C:\Users\bianc\Desktop\ASET\FakeNews\ServerComponent" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Python.DataSetAdapter">
+  <component name="RunManager" selected="Python.main">
     <configuration name="DataSetAdapter" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ServerComponent" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -157,14 +148,15 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.DataSetAdapter" />
         <item itemvalue="Python.DummyData" />
         <item itemvalue="Python.DataSetProvider" />
         <item itemvalue="Python.DatabaseConnection" />
-        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -183,18 +175,41 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604960359433">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1604960359433" />
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604349336243">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728/1366.0.1920.1160@0.0.1366.728" timestamp="1604349336243" />
+    <state width="661" height="104" key="GridCell.Tab.0.bottom" timestamp="1604962839257">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="661" height="104" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1604962839257" />
+    <state width="661" height="104" key="GridCell.Tab.0.center" timestamp="1604962839257">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="661" height="104" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1604962839257" />
+    <state width="661" height="104" key="GridCell.Tab.0.left" timestamp="1604962839257">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="661" height="104" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1604962839257" />
+    <state width="661" height="104" key="GridCell.Tab.0.right" timestamp="1604962839257">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="661" height="104" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1604962839257" />
+    <state x="184" y="9" key="SettingsEditor" timestamp="1604960562323">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1604960562323" />
   </component>
 </project>
