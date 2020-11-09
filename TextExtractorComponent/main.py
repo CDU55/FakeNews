@@ -43,4 +43,4 @@ def getDataFromTwitter(url):
     return data
 
 # TESTING FOR TWITTER GetData
-print(getDataFromTwitter(test2))
+print(getDataFromTwitter(badea))
