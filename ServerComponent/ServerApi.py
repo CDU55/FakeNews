@@ -1,6 +1,6 @@
 import Services
 from flask import Flask, request
-from flask_resful import Resource, Api
+from flask_restful import Resource, Api
 
 app = Flask(__name__)
 api = Api(app)
@@ -16,5 +16,5 @@ class ServerApi(Resource):
 
 api.add_resource(ServerApi, "/")
 
-if __name__ = '__main__' :
-    app.run(debug, True)
+if __name__ == '__main__' :
+    app.run()
