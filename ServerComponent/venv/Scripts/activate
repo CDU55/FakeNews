@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Claudiu\Desktop\Master\ASET\FakeNews\ServerComponent\venv"
+VIRTUAL_ENV="C:\Users\bianc\Desktop\ASET\FakeNews\ServerComponent\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
