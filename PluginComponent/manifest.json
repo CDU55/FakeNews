@@ -3,7 +3,7 @@
   "description": "Detect fake news",
   "version": "1.2",
   "background": {
-    "scripts": ["background.js"],
+    "scripts": ["popup.js","extract.js"], 
     "persistent": false
   },
   "permissions": [
