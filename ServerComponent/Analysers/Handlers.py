@@ -6,6 +6,7 @@ from Analysers.Models import AnalysisResult, AnalysisElement
 from Analysers.NaiveBayes import NaiveBayes
 from DataLayer.DataSetAdapter import DataSetAdapter
 from DataLayer.DataSetEntry import SocialMediaDataSetEntry
+from Utils.LoggingAspect import logging_aspect
 
 
 class Handler(ABC):
@@ -34,30 +35,34 @@ class AbstractHandler(Handler):
 
 
 class NewsFilterArticleHandler(AbstractHandler):
+    @logging_aspect
     def handle(self, request: Any, result: AnalysisResult) -> str:
         # TODO news filtering
         return super().handle(request, result)
 
 
 class FactCheckArticleHandler(AbstractHandler):
+    @logging_aspect
     def handle(self, request: Any, result: AnalysisResult) -> str:
         # TODO fact check analysis
         super().handle(request, result)
 
 
 class CommonSenseArticleHandler(AbstractHandler):
+    @logging_aspect
     def handle(self, request: Any, result: AnalysisResult) -> str:
         # TODO common sense analysis
         super().handle(request, result)
 
 
 class InductiveArticleHandler(AbstractHandler):
+    @logging_aspect
     def handle(self, request: Any, result: AnalysisResult) -> str:
         # TODO inductive analysis
         super().handle(request, result)
 
-
 class NewsFilterSocialMediaHandler(AbstractHandler):
+    @logging_aspect
     def handle(self, request: SocialMediaDataSetEntry, result: AnalysisResult) -> str:
         adapter = DataSetAdapter()
         fit_data, fit_labels = adapter.convert_to_training_datasets()
@@ -73,18 +78,21 @@ class NewsFilterSocialMediaHandler(AbstractHandler):
 
 
 class FactCheckSocialMediaHandler(AbstractHandler):
+    @logging_aspect
     def handle(self, request: Any, result: AnalysisResult) -> str:
         # TODO fact check analysis
         super().handle(request, result)
 
 
 class CommonSenseSocialMediaHandler(AbstractHandler):
+    @logging_aspect
     def handle(self, request: Any, result: AnalysisResult) -> str:
         # TODO common sense analysis
         super().handle(request, result)
 
 
 class InductiveSocialMediaHandler(AbstractHandler):
+    @logging_aspect
     def handle(self, request: Any, result: AnalysisResult) -> str:
         # TODO inductive analysis
         super().handle(request, result)

@@ -1,5 +1,7 @@
 import numpy as np
 
+from Utils.LoggingAspect import logging_aspect
+
 
 class NaiveBayes:
 
@@ -19,10 +21,12 @@ class NaiveBayes:
             self._var[idx, :] = X_c.var(axis=0)
             self._priors[idx] = X_c.shape[0] / float(n_samples)
 
+    @logging_aspect
     def predict(self, X):
         y_pred = [self._predict(x) for x in X]
         return np.array(y_pred)
 
+    @logging_aspect
     def _predict(self, x):
         posteriors = []
 
