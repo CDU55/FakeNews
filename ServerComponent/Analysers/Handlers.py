@@ -2,7 +2,10 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 from typing import Any, Optional
 
-from Analysers.Models import AnalysisResult
+from Analysers.Models import AnalysisResult, AnalysisElement
+from Analysers.NaiveBayes import NaiveBayes
+from DataLayer.DataSetAdapter import DataSetAdapter
+from DataLayer.DataSetEntry import SocialMediaDataSetEntry
 
 
 class Handler(ABC):
@@ -55,9 +58,18 @@ class InductiveArticleHandler(AbstractHandler):
 
 
 class NewsFilterSocialMediaHandler(AbstractHandler):
-    def handle(self, request: Any, result: AnalysisResult) -> str:
-        # TODO news filtering
-        return super().handle(request, result)
+    def handle(self, request: SocialMediaDataSetEntry, result: AnalysisResult) -> str:
+        adapter = DataSetAdapter()
+        fit_data, fit_labels = adapter.convert_to_training_datasets()
+        bayes = NaiveBayes()
+        bayes.fit(fit_data, fit_labels)
+        predict_data = adapter.convert_to_predict_data(request)
+        result = bayes._predict(predict_data)
+        if result == 1:
+            result.add_element(AnalysisElement(1, "The provided post is news"))
+            return super().handle(request, result)
+        else:
+            result.add_element(AnalysisElement(0, "The provided post is NOT news"))
 
 
 class FactCheckSocialMediaHandler(AbstractHandler):
