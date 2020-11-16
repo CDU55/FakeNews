@@ -30,15 +30,16 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Claudiu\Desktop\Master\ASET\FakeNews\ServerComponent\Dataset" />
-      <recent name="C:\Users\bianc\Desktop\ASET\FakeNews\ServerComponent" />
-      <recent name="C:\Users\bianc\Desktop\ASET\FakeNews\ServerComponent\venv" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Claudiu\Desktop\Master\ASET\FakeNews\ServerComponent\DataLayer" />
       <recent name="C:\Users\Claudiu\Desktop\Master\ASET\FakeNews\ServerComponent\Analysers" />
       <recent name="C:\Users\bianc\Desktop\ASET\FakeNews\ServerComponent" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Claudiu\Desktop\Master\ASET\FakeNews\ServerComponent\TextExtraction" />
+      <recent name="C:\Users\Claudiu\Desktop\Master\ASET\FakeNews\ServerComponent\Dataset" />
+      <recent name="C:\Users\bianc\Desktop\ASET\FakeNews\ServerComponent" />
+      <recent name="C:\Users\bianc\Desktop\ASET\FakeNews\ServerComponent\venv" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -53,7 +54,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.DataSetAdapter">
     <configuration name="DataSetAdapter" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ServerComponent" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -161,8 +162,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.DataSetAdapter" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.DummyData" />
         <item itemvalue="Python.DataSetProvider" />
         <item itemvalue="Python.DatabaseConnection" />
@@ -225,5 +226,16 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1604960562323" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Analysers/NaiveBayes.py</url>
+          <line>36</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
