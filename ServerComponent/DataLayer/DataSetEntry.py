@@ -3,6 +3,6 @@ class SocialMediaDataSetEntry:
         self.followers_number = followers_number
         self.likes_number = likes_number
         self.comments_number = comments_number
-        self.spelling=spelling
-        self.length=length
+        self.spelling = spelling
+        self.length = length
         self.label = label

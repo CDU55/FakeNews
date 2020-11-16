@@ -24,7 +24,7 @@ class DataSetProvider:
         conn.execute(query, params)
         conn.commit()
 
+    @my_decorator_exit_db
     def get_data_set_entries(self):
         conn = DatabaseConnection.DatabaseConnection.getInstance()
         return conn.execute("Select * FROM SocialMediaPosts")
-
