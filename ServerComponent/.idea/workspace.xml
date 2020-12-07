@@ -30,16 +30,16 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Claudiu\Desktop\Master\ASET\FakeNews\ServerComponent\DataLayer" />
-      <recent name="C:\Users\Claudiu\Desktop\Master\ASET\FakeNews\ServerComponent\Analysers" />
-      <recent name="C:\Users\bianc\Desktop\ASET\FakeNews\ServerComponent" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Claudiu\Desktop\Master\ASET\FakeNews\ServerComponent\TextExtraction" />
       <recent name="C:\Users\Claudiu\Desktop\Master\ASET\FakeNews\ServerComponent\Dataset" />
       <recent name="C:\Users\bianc\Desktop\ASET\FakeNews\ServerComponent" />
       <recent name="C:\Users\bianc\Desktop\ASET\FakeNews\ServerComponent\venv" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Claudiu\Desktop\Master\ASET\FakeNews\ServerComponent\DataLayer" />
+      <recent name="C:\Users\Claudiu\Desktop\Master\ASET\FakeNews\ServerComponent\Analysers" />
+      <recent name="C:\Users\bianc\Desktop\ASET\FakeNews\ServerComponent" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -54,7 +54,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.DataSetAdapter">
+  <component name="RunManager" selected="Python.DummyData">
     <configuration name="DataSetAdapter" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ServerComponent" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -97,27 +97,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="DatabaseConnection" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="ServerComponent" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DataLayer" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DataLayer/DatabaseConnection.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="DummyData" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ServerComponent" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -139,6 +118,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ServerComponent" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DataLayer" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DataLayer/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ServerComponent" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -151,7 +151,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Claudiu\Desktop\Master\ASET\FakeNews\ServerComponent\DataLayer\main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -162,11 +162,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.DataSetAdapter" />
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.DummyData" />
+        <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.DataSetAdapter" />
         <item itemvalue="Python.DataSetProvider" />
-        <item itemvalue="Python.DatabaseConnection" />
       </list>
     </recent_temporary>
   </component>
@@ -198,42 +198,63 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604960359433">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1604960359433" />
-    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604349336243">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728/1366.0.1920.1160@0.0.1366.728" timestamp="1604349336243" />
-    <state width="661" height="104" key="GridCell.Tab.0.bottom" timestamp="1604962839257">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="661" height="104" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1604962839257" />
-    <state width="661" height="104" key="GridCell.Tab.0.center" timestamp="1604962839257">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="661" height="104" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1604962839257" />
-    <state width="661" height="104" key="GridCell.Tab.0.left" timestamp="1604962839257">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="661" height="104" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1604962839257" />
-    <state width="661" height="104" key="GridCell.Tab.0.right" timestamp="1604962839257">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="661" height="104" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1604962839257" />
-    <state x="184" y="9" key="SettingsEditor" timestamp="1604960562323">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1604960562323" />
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" />
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" />
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" />
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728/1366.0.1920.1160@0.0.1366.728" />
+    <state width="661" height="104" key="GridCell.Tab.0.bottom" />
+    <state width="661" height="104" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" />
+    <state width="661" height="104" key="GridCell.Tab.0.center" />
+    <state width="661" height="104" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" />
+    <state width="661" height="104" key="GridCell.Tab.0.left" />
+    <state width="661" height="104" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" />
+    <state width="661" height="104" key="GridCell.Tab.0.right" />
+    <state width="661" height="104" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" />
+    <state x="184" y="9" key="SettingsEditor" />
+    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Analysers/NaiveBayes.py</url>
+          <url>file://$PROJECT_DIR$/Analysers/Handlers.py</url>
+          <line>72</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/DataLayer/CredibilityScore.py</url>
           <line>36</line>
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/DataLayer/CredibilityScore.py</url>
+          <line>37</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/DataLayer/CredibilityScore.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/DataLayer/CredibilityScore.py</url>
+          <line>39</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/DataLayer/CredibilityScore.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/DataLayer/CredibilityScore.py</url>
+          <line>41</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/DataLayer/CredibilityScore.py</url>
+          <line>42</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

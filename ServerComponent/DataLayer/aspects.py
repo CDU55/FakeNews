@@ -1,23 +1,19 @@
 import aspectlib as aspectlib
 
-from DataLayer.DataSetEntry import SocialMediaDataSetEntry
+from DataLayer import DataCategories
 
 
 @aspectlib.Aspect()
-def my_decorator_exit_db(function):
-    raw_data = function()
-    entries = []
+def my_decorator_exit_db(cutpoint, *args, **kwargs):
+    raw_data = yield
     for entry in raw_data:
-        param_followers_number = compare_followers_number(entry)
-        param_likes_number = compare_likes_number(entry)
-        param_comments_number = compare_comments_number(entry)
-        param_spelling = compare_spelling_number(entry)
-        param_length = compare_length(entry)
-        param_label = entry.label
-        new_entry = SocialMediaDataSetEntry(param_followers_number, param_likes_number, param_comments_number,
-                                            param_spelling, param_length, param_label)
-        entries.append(new_entry)
-    return entries
+        entry.followers_number = DataCategories.get_followers_category(entry.followers_number)
+        entry.likes_number = DataCategories.get_likes_category(entry.likes_number)
+        entry.comments_number = DataCategories.get_comments_category(entry.comments_number)
+        entry.share_number=DataCategories.get_shares_category(entry.share_number)
+        entry.grammar_index = DataCategories.get_grammar_index_category(entry.grammar_index)
+        entry.subject_relevance = DataCategories.get_subject_relevance_index_category(entry.subject_relevance)
+        entry.label = DataCategories.get_label(entry.label)
 
 
 def compare_followers_number(entry):

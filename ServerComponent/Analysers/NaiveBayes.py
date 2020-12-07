@@ -10,7 +10,6 @@ class NaiveBayes:
         self._classes = np.unique(y)
         n_classes = len(self._classes)
 
-        # calculate mean, var, and prior for each class
         self._mean = np.zeros((n_classes, n_features), dtype=np.float64)
         self._var = np.zeros((n_classes, n_features), dtype=np.float64)
         self._priors = np.zeros(n_classes, dtype=np.float64)
@@ -37,7 +36,6 @@ class NaiveBayes:
             posterior = prior + posterior
             posteriors.append(posterior)
 
-        # return class with highest posterior probability
         return self._classes[np.argmax(posteriors)]
 
     def _pdf(self, class_idx, x):

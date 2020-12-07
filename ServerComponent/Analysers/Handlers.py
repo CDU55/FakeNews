@@ -31,7 +31,7 @@ class AbstractHandler(Handler):
         if self._next_handler:
             return self._next_handler.handle(request, result)
 
-        return None
+        return result
 
 
 class NewsFilterArticleHandler(AbstractHandler):
@@ -69,8 +69,8 @@ class NewsFilterSocialMediaHandler(AbstractHandler):
         bayes = NaiveBayes()
         bayes.fit(fit_data, fit_labels)
         predict_data = adapter.convert_to_predict_data(request)
-        result = bayes._predict(predict_data)
-        if result == 1:
+        predict_result = bayes._predict(predict_data)
+        if predict_result == 1:
             result.add_element(AnalysisElement(1, "The provided post is news"))
             return super().handle(request, result)
         else:
