@@ -1,0 +1,3 @@
+INFO:root:add_data_set_entry got called with the following parameters:[(<DataLayer.DataSetProvider.DataSetProvider object at 0x014A40D0>, <DataLayer.DataSetEntry.TwitterDataSetEntry object at 0x014A40B0>)] [{}]
+INFO:root:An insert statement will be executed against the database
+INFO:root:None value on param number 8, it might generate an exception if the field is non nullable

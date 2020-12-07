@@ -1,7 +1,7 @@
 from flask import Flask
-from flask_restful import Resource, Api , reqparse
+from flask_restful import Resource, Api, reqparse
+
 import Services
-from TextExtraction import ImplementParse
 from TextExtraction.APIs import TwitterAPI
 
 app = Flask(__name__)
@@ -9,6 +9,7 @@ api = Api(app)
 
 server_request_args = reqparse.RequestParser()
 server_request_args.add_argument("html", type=str, help="The html with the news is required.", required=True)
+server_request_args.add_argument("url", type=str, help="The url of the news article is required.", required=True)
 
 
 class ServerApi(Resource):
@@ -17,6 +18,8 @@ class ServerApi(Resource):
 
     def post(self):
         args = server_request_args.parse_args()
+        print(args['url'])
+        return {"response": "Hello from server"}
         text_extract_result = TwitterAPI.getDataFromTwitter(args['html'])
         if text_extract_result != "Data not found":
             validation_result = self.myService.analyseRequest(text_extract_result)

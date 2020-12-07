@@ -58,12 +58,34 @@ def get_shares_category(shares_number):
         return 1
 
 
+def get_quote_tweets_category(shares_number):
+    if shares_number > 4000:
+        return 4
+    elif 4000 >= shares_number > 2000:
+        return 3
+    elif 2000 >= shares_number > 500:
+        return 2
+    else:
+        return 1
+
+
 def get_grammar_index_category(grammar_index):
     if grammar_index == 1:
         return 4
     elif 1 > grammar_index >= 0.95:
         return 3
     elif 0.95 > grammar_index >= 0.8:
+        return 2
+    else:
+        return 1
+
+
+def get_tweets_number_category(tweets_number):
+    if tweets_number > 30000:
+        return 4
+    elif 30000 >= tweets_number > 10000:
+        return 3
+    elif 10000 >= tweets_number > 2500:
         return 2
     else:
         return 1
@@ -81,7 +103,7 @@ def get_subject_relevance_index_category(subject_index):
 
 
 def get_label(credibility_score):
-    if credibility_score >= 75:
+    if credibility_score >= 65:
         return 1
     else:
         return 0

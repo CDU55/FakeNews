@@ -21,11 +21,6 @@ def getProfileName(url):
     return url.split("twitter.com/")[1].split("/")[0]
 
 
-def getProfileFollowers(user):
-    pass
-    # TODO: After Twitter API acceptance
-
-
 def checkVerifiedAccount(user):
     url = "https://mobile.twitter.com/" + user
     response = requests.get(url)
