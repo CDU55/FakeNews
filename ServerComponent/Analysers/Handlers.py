@@ -5,7 +5,7 @@ from typing import Any, Optional
 from Analysers.Models import AnalysisResult, AnalysisElement
 from Analysers.NaiveBayes import NaiveBayes
 from DataLayer.DataSetAdapter import DataSetAdapter
-from DataLayer.DataSetEntry import SocialMediaDataSetEntry
+from DataLayer.DataSetEntry import TwitterDataSetEntry
 from Utils.LoggingAspect import logging_aspect
 
 
@@ -61,9 +61,10 @@ class InductiveArticleHandler(AbstractHandler):
         # TODO inductive analysis
         super().handle(request, result)
 
+
 class NewsFilterSocialMediaHandler(AbstractHandler):
     @logging_aspect
-    def handle(self, request: SocialMediaDataSetEntry, result: AnalysisResult) -> str:
+    def handle(self, request: TwitterDataSetEntry, result: AnalysisResult) -> str:
         adapter = DataSetAdapter()
         fit_data, fit_labels = adapter.convert_to_training_datasets()
         bayes = NaiveBayes()

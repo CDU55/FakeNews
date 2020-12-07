@@ -15,12 +15,6 @@ class AnalysisService:
 
     def analyseSocialMediaPost(self, request):
         filterHandler = self.socialMediaFactory.createNewsFilterHandler()
-        commonSenseHandler = self.socialMediaFactory.createCommonSenseHandler()
-        factCheckHandler = self.socialMediaFactory.createCommonSenseHandler()
-        inductiveHandler = self.socialMediaFactory.createInductiveHandler()
-        filterHandler.set_next(commonSenseHandler) \
-            .set_next(factCheckHandler) \
-            .set_next(inductiveHandler)
         result = AnalysisResult()
         filterHandler.handle(request, result)
         return result
