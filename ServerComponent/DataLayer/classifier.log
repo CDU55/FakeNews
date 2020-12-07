@@ -1,6 +1,6 @@
-INFO:root:handle got called with the following parameters:[(<Analysers.Handlers.NewsFilterSocialMediaHandler object at 0x0106CD30>, <DataLayer.DataSetEntry.TwitterDataSetEntryUnlabeled object at 0x0106CD90>, <Analysers.Models.AnalysisResult object at 0x01079EF0>)] [{}]
+INFO:root:handle got called with the following parameters:[(<Analysers.Handlers.NewsFilterSocialMediaHandler object at 0x015ACD70>, <DataLayer.DataSetEntry.TwitterDataSetEntryUnlabeled object at 0x015ACDD0>, <Analysers.Models.AnalysisResult object at 0x015B9F30>)] [{}]
 INFO:root:A query will be executed against the database
-INFO:root:The query execution took 0.0010018348693847656 seconds
-INFO:root:_predict got called with the following parameters:[(<Analysers.NaiveBayes.NaiveBayes object at 0x0B456330>, array([2., 0., 3., 3., 2., 2., 2., 4.]))] [{}]
-INFO:root:_predict returned : 1.0
-INFO:root:handle returned : <Analysers.Models.AnalysisResult object at 0x01079EF0>
+INFO:root:The query execution took 0.001001596450805664 seconds
+INFO:root:_predict got called with the following parameters:[(<Analysers.NaiveBayes.NaiveBayes object at 0x0BB862D0>, array([3., 1., 3., 2., 3., 3., 1., 1.]))] [{}]
+INFO:root:_predict returned : 0.0
+INFO:root:handle returned : None

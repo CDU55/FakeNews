@@ -16,7 +16,7 @@ class DataSetAdapter:
         entries = []
         for entry in raw_data:
             current_entry = TwitterDataSetEntry(entry[1], entry[2], entry[3], entry[4], entry[5], entry[6],
-                                                entry[7], entry[8],entry[9])
+                                                entry[7], entry[8], entry[9])
             entries.append(current_entry)
         return entries
 
