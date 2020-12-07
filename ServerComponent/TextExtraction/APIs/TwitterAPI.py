@@ -11,6 +11,8 @@ def getDataFromTwitter(url):
             '<div class=\"dir-ltr\" dir=\"ltr\">')[1].split('</div>')[0]
     except:
         data = "Data not found"
+    if '<a class="twitter_external_link' in data:
+        return data.split('<a class="twitter_external_link')[0]
     return data
 
 
