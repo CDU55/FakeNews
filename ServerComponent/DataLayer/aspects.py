@@ -17,7 +17,7 @@ def my_decorator_exit_db(function):
         new_entry = SocialMediaDataSetEntry(param_followers_number, param_likes_number, param_comments_number,
                                             param_spelling, param_length, param_label)
         entries.append(new_entry)
-    return entries
+    yield entries
 
 
 def compare_followers_number(entry):
