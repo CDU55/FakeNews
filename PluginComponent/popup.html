@@ -2,6 +2,7 @@
 <html>
   <head>
        <link rel="stylesheet" type="text/css" href="popup.css">
+       <script type="text/javascript" src="jquery.min.js"></script>
   </head>
   </head>
   <body>
@@ -12,14 +13,17 @@
           <span class="slider"></span>
         </label></span></h2> 
       <p id="analysisStatus">Page Status: Fake News/ Not </p>
-      <div id="analysisBody">
-        <p>Our analyze:<br>
+      <p id="currentUrl"></p>
+      <div style="background-color: black;" id="analysisBody">
+        <p id="htmlTag">Our analyze:<br>
           Reason 1:<br>
           ...<br>
           Reason n:</p>
       </div>
     </div>
-    <script src="popup.js"></script>
-    <script src="extract.js"></script>
+    <script src="test_script.js"></script>
+     
   </body>
+
 </html>
+
