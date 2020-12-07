@@ -7,7 +7,8 @@ from autocorrect import Speller
 def getWordsNumber(text):
     return len(text.split())
 
-#Version 1(more safe)
+
+# Version 1(more safe)
 def getWrongWordsNumber(text):
     spell = SpellChecker()
 
@@ -29,7 +30,8 @@ def getWrongWordsNumber(text):
 def detectLanguage(text):
     return detect(text)
 
-#Version 2(faster)
+
+# Version 2(faster)
 def getWrongWordsNumbers(text):
     spell = Speller(lang='en')
 
@@ -42,9 +44,19 @@ def getWrongWordsNumbers(text):
             possibleWord = spell(word)
             if word != possibleWord:
                 lis.append(word)
-                #print(word, possibleWord)
+                # print(word, possibleWord)
 
     return len(lis)
 
 
-#TODO: https://github.com/emilmont/pyStatParser
+def calculateNumber(number):
+    if '.' in number:
+        number = number.replace('.', '')
+        if 'K' in number:
+            number = number.replace('K', '00')
+    else:
+        if 'K' in number:
+            number = number.replace('K', '000')
+    return int(number)
+
+# TODO: https://github.com/emilmont/pyStatParser
