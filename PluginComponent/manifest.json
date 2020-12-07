@@ -1,17 +1,17 @@
 {
-  "name": "Fake News",
+  "name": "FakeNews",
   "description": "Detect fake news",
-  "version": "1.2",
-  "background": {
-    "scripts": ["popup.js","extract.js"], 
-    "persistent": false
-  },
+  "version": "1.0",
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "tabs",
+    "https://www.w3schools.com/jquery/demo_ajax_gethint.asp",
+    "http://127.0.0.1:5000/"
   ],
   "browser_action": {
-      "default_title": "fake_news",
-      "default_icon": "print_16x16.png"
+      "default_title": "Fake News Detector",
+       "default_icon": "icon.png",
+      "default_popup": "popup.html"
   },
   "manifest_version": 2
 }
