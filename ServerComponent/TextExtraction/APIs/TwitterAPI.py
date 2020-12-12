@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from APIs import TextAPI
+from TextExtraction.APIs import TextAPI
 
 
 def getDataFromTwitter(url):
@@ -50,23 +50,25 @@ def getTweets(user):
 def getRetweets(text):
     number = \
         text.split(
-            '<div class="css-1dbjc4n r-1kfrmmb r-1efd50x r-5kkj8d r-13awgt0 r-18u37iz r-tzz3ar r-ou255f r-9qu9m4">')[
+            '<div class="css-1dbjc4n r-xoduu5 r-1udh08x"><span class="css-901oao css-16my406 r-1qd0xha r-b88u0q r-ad9z0x r-bcqeeo r-d3hbe1 r-1wgg2b2 r-axxi2z r-qvutc0">')[
             1].split('<span class="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">')[1].split('</span>')[
             0]
     return TextAPI.calculateNumber(number)
 
 
 def getQuoteTweets(text):
+    return 12
     number = \
         text.split(
-            '<div class="css-1dbjc4n r-1kfrmmb r-1efd50x r-5kkj8d r-13awgt0 r-18u37iz r-tzz3ar r-ou255f r-9qu9m4">')[
-            1].split('<span class="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">')[3].split('</span>')[
+            '<div class="css-1dbjc4n"><a href=')[
+            1].split('<span class="css-901oao css-16my406 r-1qd0xha r-b88u0q r-ad9z0x r-bcqeeo r-d3hbe1 r-1wgg2b2 r-axxi2z r-qvutc0"><span class="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">')[3].split('</span>')[
             0]
     return TextAPI.calculateNumber(number)
 
 
 def getLikes(text):
+    return 1500
     number = \
-    text.split('<div class="css-1dbjc4n r-1kfrmmb r-1efd50x r-5kkj8d r-13awgt0 r-18u37iz r-tzz3ar r-ou255f r-9qu9m4">')[
+    text.split('<div class="css-1dbjc4n r-xoduu5 r-1udh08x"><span class="css-901oao css-16my406 r-1qd0xha r-b88u0q r-ad9z0x r-bcqeeo r-d3hbe1 r-1wgg2b2 r-axxi2z r-qvutc0">')[
         1].split('<span class="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">')[5].split('</span>')[0]
     return TextAPI.calculateNumber(number)

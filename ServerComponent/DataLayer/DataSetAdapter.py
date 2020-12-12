@@ -1,5 +1,5 @@
 from DataLayer import DataSetProvider, DataCategories
-from DataLayer.DataSetEntry import TwitterDataSetEntry
+from DataLayer.DataSetEntry import TwitterDataSetEntry, TwitterDataSetEntryUnlabeled
 import numpy as np
 
 from DataLayer.aspects import my_decorator_exit_db
@@ -36,7 +36,7 @@ class DataSetAdapter:
             labels[index] = post.label
         return characteristics, labels
 
-    def convert_to_predict_data(self, data: TwitterDataSetEntry):
+    def convert_to_predict_data(self, data: TwitterDataSetEntryUnlabeled):
         predict_data = np.zeros(self.categories)
         predict_data[0] = DataCategories.get_followers_category(data.followers_number)
         predict_data[1] = data.verified

@@ -1,6 +1,15 @@
 from DataLayer.DatabaseOperations import get_all, delete_entry
+from pythonrv import rv
+
+from DataLayer import DataSetProvider
 
 
+@rv.monitor(add_to_db=DataSetProvider.add_data_set_entry)
+def input_only_spec(event):
+    assert event.fn.add_to_db.inputs[0] >= 0
+
+
+@rv.monitor(add_to_db=DataSetProvider.add_data_set_entry)
 def validate():
     entries = get_all()
     for entry in entries:

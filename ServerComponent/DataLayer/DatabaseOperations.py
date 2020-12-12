@@ -30,6 +30,3 @@ def delete_entry(entry_id):
     cur = conn.cursor()
     cur.execute(delete_statement, params)
     conn.commit()
-
-
-delete_entry(get_next_id() - 1)

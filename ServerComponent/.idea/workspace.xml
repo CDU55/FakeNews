@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cb6c3092-f239-4e60-b03c-394791997dd2" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,11 +47,6 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Claudiu\Desktop\Master\ASET\FakeNews\ServerComponent\DataLayer" />
-      <recent name="C:\Users\Claudiu\Desktop\Master\ASET\FakeNews\ServerComponent\Analysers" />
-      <recent name="C:\Users\bianc\Desktop\ASET\FakeNews\ServerComponent" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Claudiu\Desktop\Master\ASET\FakeNews\ServerComponent\Analysers" />
       <recent name="C:\Users\Claudiu\Desktop\Master\ASET\FakeNews\ServerComponent\TextExtraction" />
@@ -42,20 +54,13 @@
       <recent name="C:\Users\bianc\Desktop\ASET\FakeNews\ServerComponent" />
       <recent name="C:\Users\bianc\Desktop\ASET\FakeNews\ServerComponent\venv" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bianc\Desktop\ASET\FakeNews\ServerComponent" />
+      <recent name="C:\Users\Claudiu\Desktop\Master\ASET\FakeNews\ServerComponent\DataLayer" />
+      <recent name="C:\Users\Claudiu\Desktop\Master\ASET\FakeNews\ServerComponent\Analysers" />
+    </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Python.DatabaseOperations">
+  <component name="RunManager" selected="Python.ServerApi">
     <configuration name="DatabaseOperations" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ServerComponent" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -98,6 +103,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="ServerApi" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ServerComponent" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ServerApi.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ServerComponent" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -111,27 +137,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DataLayer/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="main (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="ServerComponent" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TextExtraction" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TextExtraction/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -163,15 +168,15 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.DatabaseOperations" />
         <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.ServerApi" />
+        <item itemvalue="Python.DatabaseOperations" />
         <item itemvalue="Python.test_statement_analysis" />
         <item itemvalue="Python.DummyData" />
-        <item itemvalue="Python.main (2)" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -190,28 +195,90 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" />
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" />
-    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" />
-    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728/1366.0.1920.1160@0.0.1366.728" />
-    <state width="661" height="104" key="GridCell.Tab.0.bottom" />
-    <state width="661" height="104" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" />
-    <state width="661" height="104" key="GridCell.Tab.0.center" />
-    <state width="661" height="104" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" />
-    <state width="661" height="104" key="GridCell.Tab.0.left" />
-    <state width="661" height="104" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" />
-    <state width="661" height="104" key="GridCell.Tab.0.right" />
-    <state width="661" height="104" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" />
-    <state x="184" y="9" key="SettingsEditor" />
-    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" />
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607414337661" />
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1607414337663" />
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607414337663" />
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728/1366.0.1920.1160@0.0.1366.728" timestamp="1607414337663" />
+    <state width="972" height="466" key="DebuggerActiveHint" timestamp="1607785484519">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="972" height="466" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1607785484519" />
+    <state width="907" height="201" key="GridCell.Tab.0.bottom" timestamp="1607786725387">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="907" height="201" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607786725387" />
+    <state width="907" height="201" key="GridCell.Tab.0.center" timestamp="1607786725386">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="907" height="201" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607786725386" />
+    <state width="907" height="201" key="GridCell.Tab.0.left" timestamp="1607786725386">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="907" height="201" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607786725386" />
+    <state width="907" height="201" key="GridCell.Tab.0.right" timestamp="1607786725386">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="907" height="201" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607786725386" />
+    <state width="907" height="201" key="GridCell.Tab.1.bottom" timestamp="1607786728429">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="907" height="201" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607786728429" />
+    <state width="907" height="201" key="GridCell.Tab.1.center" timestamp="1607786728429">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="907" height="201" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1607786728429" />
+    <state width="907" height="201" key="GridCell.Tab.1.left" timestamp="1607786728429">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="907" height="201" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1607786728429" />
+    <state width="907" height="201" key="GridCell.Tab.1.right" timestamp="1607786728429">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="907" height="201" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1607786728429" />
+    <state x="184" y="9" key="SettingsEditor" timestamp="1607414337663" />
+    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1607414337663" />
+    <state width="691" height="372" key="XDebugger.FullValuePopup" timestamp="1607785708265">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="691" height="372" key="XDebugger.FullValuePopup/0.0.1366.728@0.0.1366.728" timestamp="1607785708265" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Analysers/Handlers.py</url>
+          <line>77</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/DataLayer/DataSetAdapter.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/DataLayer/DataSetAdapter.py</url>
+          <line>23</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Analysers/Handlers.py</url>
+          <line>67</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Analysers/Handlers.py</url>
+          <line>68</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

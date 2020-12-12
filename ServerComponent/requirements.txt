@@ -1,5 +1,5 @@
-jellyfish
-pandas
+jellyfish~=0.8.2
+pandas~=1.1.5
 recordlinkage
 aniso8601==8.0.0
 click==7.1.2
@@ -17,3 +17,8 @@ aspectlib~=1.5.2
 requests~=2.25.0
 beautifulsoup4~=4.9.3
 numpy==1.19.4
+pythonrv~=0.1.3
+spellchecker~=0.4
+langdetect~=1.0.8
+autocorrect~=2.2.2
+apis~=0.0.1

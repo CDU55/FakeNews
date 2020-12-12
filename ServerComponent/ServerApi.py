@@ -2,7 +2,6 @@ from flask import Flask
 from flask_restful import Resource, Api, reqparse
 
 import Services
-from TextExtraction.APIs import TwitterAPI
 
 app = Flask(__name__)
 api = Api(app)
@@ -14,18 +13,12 @@ server_request_args.add_argument("url", type=str, help="The url of the news arti
 
 class ServerApi(Resource):
     def __init__(self):
+        pass
         self.myService = Services.AnalysisService()
 
     def post(self):
         args = server_request_args.parse_args()
-        print(args['url'])
-        return {"response": "Hello from server"}
-        text_extract_result = TwitterAPI.getDataFromTwitter(args['html'])
-        if text_extract_result != "Data not found":
-            validation_result = self.myService.analyseRequest(text_extract_result)
-        else:
-            validation_result = text_extract_result
-        return {"response": validation_result}
+        return {"response": self.myService.analyseRequest(args['html'], args['url'])}
 
     def get(self):
         return {"response": "Make the request with post method."}
