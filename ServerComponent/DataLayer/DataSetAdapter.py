@@ -1,6 +1,7 @@
-from DataLayer import DataSetProvider, DataCategories
+from DataLayer import DataSetProvider, DataCategories, DatabaseOperations
 from DataLayer.DataSetEntry import TwitterDataSetEntry, TwitterDataSetEntryUnlabeled
 import numpy as np
+from DataLayer.aspects import my_decorator_exit_db_fun
 
 from DataLayer.aspects import my_decorator_exit_db
 
@@ -10,14 +11,15 @@ class DataSetAdapter:
         self.data_set_provider = DataSetProvider.DataSetProvider()
         self.categories = 8
 
-    @my_decorator_exit_db
+    #@my_decorator_exit_db
     def provide_dataset_entries(self):
-        raw_data = self.data_set_provider.get_data_set_entries()
+        raw_data = DatabaseOperations.get_all()
         entries = []
         for entry in raw_data:
             current_entry = TwitterDataSetEntry(entry[1], entry[2], entry[3], entry[4], entry[5], entry[6],
                                                 entry[7], entry[8], entry[9])
             entries.append(current_entry)
+        my_decorator_exit_db_fun(entries)
         return entries
 
     def convert_to_training_datasets(self):

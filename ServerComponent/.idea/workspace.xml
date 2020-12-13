@@ -47,6 +47,12 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bianc\Desktop\ASET\FakeNews\ServerComponent\DataLayer" />
+      <recent name="C:\Users\bianc\Desktop\ASET\FakeNews\ServerComponent" />
+      <recent name="C:\Users\Claudiu\Desktop\Master\ASET\FakeNews\ServerComponent\DataLayer" />
+      <recent name="C:\Users\Claudiu\Desktop\Master\ASET\FakeNews\ServerComponent\Analysers" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Claudiu\Desktop\Master\ASET\FakeNews\ServerComponent\Analysers" />
       <recent name="C:\Users\Claudiu\Desktop\Master\ASET\FakeNews\ServerComponent\TextExtraction" />
@@ -54,13 +60,8 @@
       <recent name="C:\Users\bianc\Desktop\ASET\FakeNews\ServerComponent" />
       <recent name="C:\Users\bianc\Desktop\ASET\FakeNews\ServerComponent\venv" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\bianc\Desktop\ASET\FakeNews\ServerComponent" />
-      <recent name="C:\Users\Claudiu\Desktop\Master\ASET\FakeNews\ServerComponent\DataLayer" />
-      <recent name="C:\Users\Claudiu\Desktop\Master\ASET\FakeNews\ServerComponent\Analysers" />
-    </key>
   </component>
-  <component name="RunManager" selected="Python.ServerApi">
+  <component name="RunManager" selected="Python.ServerApi (1)">
     <configuration name="DatabaseOperations" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ServerComponent" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -82,7 +83,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="DummyData" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="ServerApi (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ServerComponent" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -90,11 +91,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DataLayer" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DataLayer/DummyData.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ServerApi.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -115,7 +116,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ServerApi.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\bianc\Desktop\ASET\FakeNews\ServerComponent\DataLayer\ServerApi.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -168,11 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.ServerApi (1)" />
         <item itemvalue="Python.ServerApi" />
+        <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.DatabaseOperations" />
         <item itemvalue="Python.test_statement_analysis" />
-        <item itemvalue="Python.DummyData" />
       </list>
     </recent_temporary>
   </component>
@@ -211,38 +212,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="972" height="466" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1607785484519" />
-    <state width="907" height="201" key="GridCell.Tab.0.bottom" timestamp="1607786725387">
+    <state width="935" height="292" key="GridCell.Tab.0.bottom" timestamp="1607896717638">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="907" height="201" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607786725387" />
-    <state width="907" height="201" key="GridCell.Tab.0.center" timestamp="1607786725386">
+    <state width="935" height="292" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607896717638" />
+    <state width="935" height="292" key="GridCell.Tab.0.center" timestamp="1607896717638">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="907" height="201" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607786725386" />
-    <state width="907" height="201" key="GridCell.Tab.0.left" timestamp="1607786725386">
+    <state width="935" height="292" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607896717638" />
+    <state width="935" height="292" key="GridCell.Tab.0.left" timestamp="1607896717638">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="907" height="201" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607786725386" />
-    <state width="907" height="201" key="GridCell.Tab.0.right" timestamp="1607786725386">
+    <state width="935" height="292" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607896717638" />
+    <state width="935" height="292" key="GridCell.Tab.0.right" timestamp="1607896717638">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="907" height="201" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607786725386" />
-    <state width="907" height="201" key="GridCell.Tab.1.bottom" timestamp="1607786728429">
+    <state width="935" height="292" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607896717638" />
+    <state width="935" height="292" key="GridCell.Tab.1.bottom" timestamp="1607896717639">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="907" height="201" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607786728429" />
-    <state width="907" height="201" key="GridCell.Tab.1.center" timestamp="1607786728429">
+    <state width="935" height="292" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607896717639" />
+    <state width="935" height="292" key="GridCell.Tab.1.center" timestamp="1607896717639">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="907" height="201" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1607786728429" />
-    <state width="907" height="201" key="GridCell.Tab.1.left" timestamp="1607786728429">
+    <state width="935" height="292" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1607896717639" />
+    <state width="935" height="292" key="GridCell.Tab.1.left" timestamp="1607896717639">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="907" height="201" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1607786728429" />
-    <state width="907" height="201" key="GridCell.Tab.1.right" timestamp="1607786728429">
+    <state width="935" height="292" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1607896717639" />
+    <state width="935" height="292" key="GridCell.Tab.1.right" timestamp="1607896717639">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="907" height="201" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1607786728429" />
+    <state width="935" height="292" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1607896717639" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1607414337663" />
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1607414337663" />
     <state width="691" height="372" key="XDebugger.FullValuePopup" timestamp="1607785708265">
@@ -254,29 +255,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Analysers/Handlers.py</url>
-          <line>77</line>
-          <option name="timeStamp" value="40" />
+          <url>file://$PROJECT_DIR$/DataLayer/aspects.py</url>
+          <line>7</line>
+          <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DataLayer/DataSetAdapter.py</url>
-          <line>24</line>
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DataLayer/DataSetAdapter.py</url>
-          <line>23</line>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Analysers/Handlers.py</url>
-          <line>67</line>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Analysers/Handlers.py</url>
-          <line>68</line>
-          <option name="timeStamp" value="46" />
+          <url>file://$PROJECT_DIR$/DataLayer/aspects.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="63" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

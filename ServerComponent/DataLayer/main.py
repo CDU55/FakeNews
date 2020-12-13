@@ -13,7 +13,8 @@ quote_tweets = random.randint(0, 4000)
 likes_number = random.randint(0, 100000)
 grammar_index = random.randint(0, 100) / 100
 subject_relevance = random.randint(0, 100)
-post = TwitterDataSetEntryUnlabeled(likes, verified, tweets_number, retweets, quote_tweets, likes_number, grammar_index, subject_relevance)
+post = TwitterDataSetEntryUnlabeled(likes, verified, tweets_number, retweets, quote_tweets, likes_number, grammar_index,
+                                    subject_relevance)
 result = AnalysisResult()
 handler.handle(post, result)
 print("Likes : {}".format(likes))
