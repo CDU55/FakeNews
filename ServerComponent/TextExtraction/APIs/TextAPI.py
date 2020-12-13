@@ -5,11 +5,15 @@ from autocorrect import Speller
 
 
 def getWordsNumber(text):
+    if text == "ERROR404:Data not found":
+        return 0
     return len(text.split())
 
 
 # Version 1(more safe)
 def getWrongWordsNumber(text):
+    if text == "ERROR404:Data not found":
+        return 0
     spell = SpellChecker()
 
     text = text.replace('\'s', ' ')
@@ -33,6 +37,8 @@ def detectLanguage(text):
 
 # Version 2(faster)
 def getWrongWordsNumbers(text):
+    if text == "ERROR404:Data not found":
+        return 0
     spell = Speller(lang='en')
 
     text = text.replace('\'s', ' ')

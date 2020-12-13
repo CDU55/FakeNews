@@ -1,20 +1,16 @@
 import requests
 from bs4 import BeautifulSoup
-from TextExtraction.APIs import TextAPI
+from APIs import TextAPI
 
 
-def getDataFromTwitter(url):
-    new_url = "https://mobile.twitter.com" + url.split('twitter.com')[1]
-    response = requests.get(new_url)
-    soup = BeautifulSoup(response.text, "html.parser")
-    try:
-        data = str(soup).split('<td class=\"tweet-content\" colspan=\"3\">')[1].split('</td>')[0].split(
-            '<div class=\"dir-ltr\" dir=\"ltr\">')[1].split('</div>')[0]
-    except:
-        data = "Data not found"
-    if '<a class="twitter_external_link' in data:
-        return data.split('<a class="twitter_external_link')[0]
-    return data
+def getDataFromTwitter(text):
+    if '" property="og:description" data-rh="true">' in text:
+        data = text.split('" property="og:description" data-rh="true">')[0].split('<meta content="')
+        result = data[len(data) - 1]
+        if '&#39;' in result:
+            return result.replace('&#39;', "'")
+        return result
+    return "ERROR404:Data not found"
 
 
 def getProfileName(url):
@@ -48,27 +44,30 @@ def getTweets(user):
 
 
 def getRetweets(text):
-    number = \
-        text.split(
-            '<div class="css-1dbjc4n r-xoduu5 r-1udh08x"><span class="css-901oao css-16my406 r-1qd0xha r-b88u0q r-ad9z0x r-bcqeeo r-d3hbe1 r-1wgg2b2 r-axxi2z r-qvutc0">')[
-            1].split('<span class="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">')[1].split('</span>')[
-            0]
-    return TextAPI.calculateNumber(number)
+    if '</span></span></div> <span class="css-901oao css-16my406 r-111h2gw r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0"><span class="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">Retweets</span>' in text:
+        number = \
+            text.split(
+                '</span></span></div> <span class="css-901oao css-16my406 r-111h2gw r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0"><span class="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">Retweets</span>')[
+                0].split('">')
+        return TextAPI.calculateNumber(number[len(number) - 1])
+    return 0
 
 
 def getQuoteTweets(text):
-    return 12
-    number = \
-        text.split(
-            '<div class="css-1dbjc4n"><a href=')[
-            1].split('<span class="css-901oao css-16my406 r-1qd0xha r-b88u0q r-ad9z0x r-bcqeeo r-d3hbe1 r-1wgg2b2 r-axxi2z r-qvutc0"><span class="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">')[3].split('</span>')[
-            0]
-    return TextAPI.calculateNumber(number)
+    if '</span></span></div> <span class="css-901oao css-16my406 r-111h2gw r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0"><span class="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">Quote Tweets</span>' in text:
+        number = \
+            text.split(
+                '</span></span></div> <span class="css-901oao css-16my406 r-111h2gw r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0"><span class="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">Quote Tweets</span>')[
+                0].split('">')
+        return TextAPI.calculateNumber(number[len(number) - 1])
+    return 0
 
 
 def getLikes(text):
-    return 1500
-    number = \
-    text.split('<div class="css-1dbjc4n r-xoduu5 r-1udh08x"><span class="css-901oao css-16my406 r-1qd0xha r-b88u0q r-ad9z0x r-bcqeeo r-d3hbe1 r-1wgg2b2 r-axxi2z r-qvutc0">')[
-        1].split('<span class="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">')[5].split('</span>')[0]
-    return TextAPI.calculateNumber(number)
+    if '</span></span></div> <span class="css-901oao css-16my406 r-111h2gw r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0"><span class="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">Likes</span>' in text:
+        number = \
+            text.split(
+                '</span></span></div> <span class="css-901oao css-16my406 r-111h2gw r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0"><span class="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">Likes</span>')[
+                0].split('">')
+        return TextAPI.calculateNumber(number[len(number) - 1])
+    return 0
