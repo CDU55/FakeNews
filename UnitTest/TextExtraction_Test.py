@@ -1,4 +1,4 @@
-from ServerComponent.TextExtraction.APIs import TextAPI
+from ServerComponent.TextExtraction.APIs import TextAPI, TwitterAPI
 
 
 def test_textapi():
@@ -22,8 +22,40 @@ def test_textapi():
     # getWrongWordsNumbers function
     assert TextAPI.getWrongWordsNumbers(sentence) == 1, "Should be 1 (teat => test)"
 
+
 def test_twitterapi():
-    pass
+    url = 'https://twitter.com/realDonaldTrump/status/1335971721262796801'
+    html = open("htmlsource.txt", "r", encoding="utf8").read()
+    sentence = "This is a teat. Please work!"
+
+    # getDataFromTwitter function
+    assert TwitterAPI.getDataFromTwitter(html) != "ERROR404:Data not found"
+
+    # getProfileName function
+    assert TwitterAPI.getProfileName(url) == "realDonaldTrump"
+    user = TwitterAPI.getProfileName(url)
+
+    # checkVerifiedAccount function
+    assert TwitterAPI.checkVerifiedAccount(user) == True
+    assert TwitterAPI.checkVerifiedAccount("mrabobi") == False
+
+    # getFollowers function
+    assert str(TwitterAPI.getFollowers(user))[0] == '8' and str(TwitterAPI.getFollowers(user))[1] == '8'
+
+    # getTweets function
+    assert str(TwitterAPI.getTweets(user))[0] == '5' and str(TwitterAPI.getTweets(user))[1] == '9'
+
+    # getRetweets function
+    assert TwitterAPI.getRetweets(html) == 68200
+    assert TwitterAPI.getLikes(sentence) == 0
+
+    # getQuoteTweets function
+    assert TwitterAPI.getQuoteTweets(html) == 11600
+    assert TwitterAPI.getLikes(sentence) == 0
+
+    # getLikes function
+    assert TwitterAPI.getLikes(html) == 317200
+    assert TwitterAPI.getLikes(sentence) == 0
 
 
 if __name__ == "__main__":

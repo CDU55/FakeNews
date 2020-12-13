@@ -22,7 +22,7 @@ def checkVerifiedAccount(user):
     response = requests.get(url)
     if response.status_code == 200:
         soup = BeautifulSoup(response.text, "html.parser")
-        if soup.find("img alt=\"Verified Account\"") != -1:
+        if '<img alt="Verified Account" src' in str(soup):
             return True
     return False
 
@@ -32,15 +32,20 @@ def getFollowers(user):
     response = requests.get(url)
     soup = BeautifulSoup(response.text, "html.parser")
     separator = '<a href="/' + user + '/followers">'
-    return str(soup).split(separator)[1].split('</a>')[0].split('<div class="statnum">')[1].split('</div>')[0]
-
+    number = str(soup).split(separator)[1].split('</a>')[0].split('<div class="statnum">')[1].split('</div>')[0]
+    if "," in number:
+        return int(number.replace(",", ""))
+    return int(number)
 
 def getTweets(user):
     url = "https://mobile.twitter.com/" + user
     response = requests.get(url)
     soup = BeautifulSoup(response.text, "html.parser")
     separator = '<td class="stat">'
-    return str(soup).split(separator)[1].split('</td>')[0].split('<div class="statnum">')[1].split('</div>')[0]
+    number = str(soup).split(separator)[1].split('</td>')[0].split('<div class="statnum">')[1].split('</div>')[0]
+    if "," in number:
+        return number.replace(",", "")
+    return number
 
 
 def getRetweets(text):
