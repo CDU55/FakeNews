@@ -49,6 +49,8 @@ print("Likes:", TwitterAPI.getLikes(text))
 print("Retweets:", TwitterAPI.getRetweets(text))
 print("Quote Tweets", TwitterAPI.getQuoteTweets(text))
 
-print("There are",TextAPI.getWrongWordsNumbers(data),"wrong words out of",TextAPI.getWordsNumber(data))
+print("There are", TextAPI.getWrongWordsNumbers(data),"wrong words out of",TextAPI.getWordsNumber(data))
 
 print("Text:", TwitterAPI.getDataFromTwitter(text))
+
+print(TextAPI.getListOfSentences(data))

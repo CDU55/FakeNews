@@ -2,6 +2,7 @@ from spellchecker import SpellChecker
 import string
 from langdetect import detect
 from autocorrect import Speller
+from nltk import sent_tokenize
 
 
 def getWordsNumber(text):
@@ -64,5 +65,8 @@ def calculateNumber(number):
         if 'K' in number:
             number = number.replace('K', '000')
     return int(number)
+
+def getListOfSentences(text):
+    return sent_tokenize(text)
 
 # TODO: https://github.com/emilmont/pyStatParser
