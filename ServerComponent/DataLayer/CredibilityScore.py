@@ -8,6 +8,7 @@ quote_tweets_weight = 5
 likes_number_weight = 5
 grammar_index_weight = 15
 subject_relevance_weight = 30
+comments_weight=10
 
 
 def get_followers_score(followers_number):
@@ -18,8 +19,8 @@ def get_likes_score(likes_number):
     return DataCategories.get_likes_category(likes_number) * likes_number_weight / 4
 
 
-# def get_comments_score(comments_number):
-#    return DataCategories.get_comments_category(comments_number) * comments_weight / 4
+def get_comments_score(comments_number):
+    return DataCategories.get_comments_category(comments_number) * comments_weight / 4
 
 
 def get_share_score(share_number):

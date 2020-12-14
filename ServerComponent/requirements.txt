@@ -1,3 +1,4 @@
+dask
 jellyfish
 pandas
 recordlinkage
