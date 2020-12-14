@@ -48,31 +48,32 @@ def getTweets(user):
     return number
 
 
+
 def getRetweets(text):
-    if '</span></span></div> <span class="css-901oao css-16my406 r-111h2gw r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0"><span class="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">Retweets</span>' in text:
+    if '</span></span></div> <span class="css-901oao css-16my406 r-m0bqgq r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0"><span class="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">Retweets</span>' in text:
         number = \
             text.split(
-                '</span></span></div> <span class="css-901oao css-16my406 r-111h2gw r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0"><span class="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">Retweets</span>')[
+                '</span></span></div> <span class="css-901oao css-16my406 r-m0bqgq r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0"><span class="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">Retweets</span>')[
                 0].split('">')
         return TextAPI.calculateNumber(number[len(number) - 1])
     return 0
 
 
 def getQuoteTweets(text):
-    if '</span></span></div> <span class="css-901oao css-16my406 r-111h2gw r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0"><span class="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">Quote Tweets</span>' in text:
+    if '</span></span></div> <span class="css-901oao css-16my406 r-m0bqgq r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0"><span class="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">Quote Tweets</span>' in text:
         number = \
             text.split(
-                '</span></span></div> <span class="css-901oao css-16my406 r-111h2gw r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0"><span class="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">Quote Tweets</span>')[
+                '</span></span></div> <span class="css-901oao css-16my406 r-m0bqgq r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0"><span class="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">Quote Tweets</span>')[
                 0].split('">')
         return TextAPI.calculateNumber(number[len(number) - 1])
     return 0
 
 
 def getLikes(text):
-    if '</span></span></div> <span class="css-901oao css-16my406 r-111h2gw r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0"><span class="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">Likes</span>' in text:
+    if '</span></span></div> <span class="css-901oao css-16my406 r-m0bqgq r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0"><span class="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">Likes</span>' in text:
         number = \
             text.split(
-                '</span></span></div> <span class="css-901oao css-16my406 r-111h2gw r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0"><span class="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">Likes</span>')[
+                '</span></span></div> <span class="css-901oao css-16my406 r-m0bqgq r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0"><span class="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">Likes</span>')[
                 0].split('">')
         return TextAPI.calculateNumber(number[len(number) - 1])
     return 0
