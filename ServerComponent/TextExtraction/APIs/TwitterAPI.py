@@ -34,8 +34,8 @@ def getFollowers(user):
     separator = '<a href="/' + user + '/followers">'
     number = str(soup).split(separator)[1].split('</a>')[0].split('<div class="statnum">')[1].split('</div>')[0]
     if "," in number:
-        return int(number.replace(",", ""))
-    return int(number)
+        return float(number.replace(",", ""))
+    return float(number)
 
 def getTweets(user):
     url = "https://mobile.twitter.com/" + user
