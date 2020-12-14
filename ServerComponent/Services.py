@@ -9,7 +9,7 @@ from TextExtraction.APIs import TwitterAPI, TextAPI
 prom.start_http_server(8000)
 
 req_summary = prom.Summary('response_metrics', 'Time spent processing a request')
-c = prom.Counter('my_database_validation', 'Validate database values')
+c = prom.Counter('my_exception_counter', 'Validate database values')
 
 
 class AnalysisService:
@@ -18,7 +18,7 @@ class AnalysisService:
         self.newsFactory = NewsAnalysersFactory()
 
     @req_summary.time()
-    #@c.count_exceptions()
+    @c.count_exceptions()
     def analyseRequest(self, html, url):
         if url != "":
             result = self.analyseTwitterPost(html, url)
@@ -30,18 +30,22 @@ class AnalysisService:
     def analyseTwitterPost(self, html, url):
 
         handler = NewsFilterSocialMediaHandler()
-        followers_number = float(TwitterAPI.getFollowers(TwitterAPI.getProfileName(url)).replace(",", ""))
+        followers_number = TwitterAPI.getFollowers(TwitterAPI.getProfileName(url))
         if TwitterAPI.checkVerifiedAccount(TwitterAPI.getProfileName(url)) :
             verified = 1
-        else: verified = 0
+        else:
+            verified = 0
         tweets_number = float(TwitterAPI.getTweets(TwitterAPI.getProfileName(url)).replace(",", ""))
         retweets = TwitterAPI.getRetweets(html)
         quote_tweets = TwitterAPI.getQuoteTweets(html)
         likes_number = TwitterAPI.getLikes(html)
-        words_number = TextAPI.getWordsNumber(TwitterAPI.getDataFromTwitter(url))
-        wrong_words = TextAPI.getWrongWordsNumbers(TwitterAPI.getDataFromTwitter(url))
+        words_number = TextAPI.getWordsNumber(TwitterAPI.getDataFromTwitter(html))
+        wrong_words = TextAPI.getWrongWordsNumbers(TwitterAPI.getDataFromTwitter(html))
         correct_words = words_number - wrong_words
-        grammar_index = (correct_words / words_number)
+        if words_number != 0:
+            grammar_index = (correct_words / words_number)
+        else:
+            grammar_index = 0
         subject_relevance = 90
         post = TwitterDataSetEntryUnlabeled(followers_number, verified, tweets_number, retweets, quote_tweets,
                                             likes_number,
@@ -63,7 +67,3 @@ class AnalysisService:
         filterHandler.handle(request, result)
         return result
 
-#    with c.count_exceptions():
- #       print("Start database validation.")
-  #      ValidateDatabase.validate()
-   #     print("End database validation.")
