@@ -3,6 +3,7 @@ class AnalysisElement:
         self.validation_result = validationResult
         self.validation_message = validationMessage
 
+
 class AnalysisResult:
     def __init__(self):
         self.elements = []
@@ -15,6 +16,7 @@ class DataSetEntry:
     def __init__(self, index, classification):
         self.index = index
         self.classification = classification
+
 
 class DataSetEntries:
     def __init__(self):

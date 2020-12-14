@@ -2,14 +2,19 @@ from spellchecker import SpellChecker
 import string
 from langdetect import detect
 from autocorrect import Speller
+from nltk import sent_tokenize
 
 
 def getWordsNumber(text):
+    if text == "ERROR404:Data not found":
+        return 0
     return len(text.split())
 
 
 # Version 1(more safe)
 def getWrongWordsNumber(text):
+    if text == "ERROR404:Data not found":
+        return 0
     spell = SpellChecker()
 
     text = text.replace('\'s', ' ')
@@ -33,6 +38,8 @@ def detectLanguage(text):
 
 # Version 2(faster)
 def getWrongWordsNumbers(text):
+    if text == "ERROR404:Data not found":
+        return 0
     spell = Speller(lang='en')
 
     text = text.replace('\'s', ' ')
@@ -58,5 +65,8 @@ def calculateNumber(number):
         if 'K' in number:
             number = number.replace('K', '000')
     return int(number)
+
+def getListOfSentences(text):
+    return sent_tokenize(text)
 
 # TODO: https://github.com/emilmont/pyStatParser

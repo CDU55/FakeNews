@@ -23,5 +23,5 @@ def validate():
             delete_current_Entry = True
         if entry[9] < 0 or entry[9] > 100:
             delete_current_Entry = True
-        if delete_entry:
+        if delete_current_Entry:
             delete_entry(entry[0])

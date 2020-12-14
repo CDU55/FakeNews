@@ -1,7 +1,8 @@
 from DataLayer import DatabaseConnection
 from Utils.DatabaseAspect import query_aspect, insert_aspect
 
-conn = DatabaseConnection.DatabaseConnection.getInstance()
+db = DatabaseConnection.DatabaseConnection()
+conn = db.getInstance()
 
 
 def get_next_id():
@@ -13,7 +14,14 @@ def get_next_id():
 
 @query_aspect
 def get_all():
-    result = conn.execute("Select * FROM SocialMediaPosts")
+    db = DatabaseConnection.DatabaseConnection()
+    conn = db.getInstance()
+    if conn is None:
+        return "Bad connection"
+    try:
+        result = conn.execute("Select * FROM SocialMediaPosts")
+    except Exception as e:
+        print(e)
     return result
 
 
@@ -30,6 +38,3 @@ def delete_entry(entry_id):
     cur = conn.cursor()
     cur.execute(delete_statement, params)
     conn.commit()
-
-
-delete_entry(get_next_id() - 1)
