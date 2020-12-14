@@ -1,10 +1,13 @@
 from flask import Flask
 from flask_restful import Resource, Api, reqparse
+from prometheus_flask_exporter import PrometheusMetrics
 
 import Services
 
 app = Flask(__name__)
 api = Api(app)
+PrometheusMetrics(app)
+endpoints = ('/')
 
 server_request_args = reqparse.RequestParser()
 server_request_args.add_argument("html", type=str, help="The html with the news is required.", required=True)

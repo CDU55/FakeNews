@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from ServerComponent.TextExtraction.APIs import TextAPI
+from TextExtraction.APIs import TextAPI
 
 
 def getDataFromTwitter(text):

@@ -1,18 +1,26 @@
 INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): mobile.twitter.com:443
-DEBUG:urllib3.connectionpool:https://mobile.twitter.com:443 "GET /pinkfloyd HTTP/1.1" 200 8182
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): mobile.twitter.com:443
-DEBUG:urllib3.connectionpool:https://mobile.twitter.com:443 "GET /pinkfloyd HTTP/1.1" 200 8181
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): mobile.twitter.com:443
-DEBUG:urllib3.connectionpool:https://mobile.twitter.com:443 "GET /pinkfloyd HTTP/1.1" 200 8185
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): mobile.twitter.com:443
-DEBUG:urllib3.connectionpool:https://mobile.twitter.com:443 "GET /pinkfloyd/status/1325772237341945858 HTTP/1.1" 200 5102
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): mobile.twitter.com:443
-DEBUG:urllib3.connectionpool:https://mobile.twitter.com:443 "GET /pinkfloyd/status/1325772237341945858 HTTP/1.1" 200 5100
-INFO:root:handle got called with the following parameters:[(<Analysers.Handlers.NewsFilterSocialMediaHandler object at 0x0841FE70>, <DataLayer.DataSetEntry.TwitterDataSetEntryUnlabeled object at 0x08A63830>, <Analysers.Models.AnalysisResult object at 0x08A63ED0>)] [{}]
-INFO:root:A query will be executed against the database
-INFO:root:The query execution took 0.0009980201721191406 seconds
-INFO:root:_predict got called with the following parameters:[(<Analysers.NaiveBayes.NaiveBayes object at 0x08A637B0>, array([4., 1., 1., 1., 1., 1., 4., 4.]))] [{}]
-INFO:root:_predict returned : 1.0
-INFO:root:handle returned : <Analysers.Models.AnalysisResult object at 0x08A63ED0>
-INFO:werkzeug:127.0.0.1 - - [13/Dec/2020 23:58:46] "[37mPOST / HTTP/1.1[0m" 200 -
+DEBUG:urllib3.connectionpool:https://mobile.twitter.com:443 "GET /pinkfloyd HTTP/1.1" 200 8037
+ERROR:ServerApi:Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\bianc\Desktop\ASET\FakeNews\ServerComponent\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\bianc\Desktop\ASET\FakeNews\ServerComponent\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\bianc\Desktop\ASET\FakeNews\ServerComponent\venv\lib\site-packages\flask_restful\__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\bianc\Desktop\ASET\FakeNews\ServerComponent\venv\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\bianc\Desktop\ASET\FakeNews\ServerComponent\venv\lib\site-packages\flask_restful\__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:/Users/bianc/Desktop/ASET/FakeNews/ServerComponent/ServerApi.py", line 24, in post
+    return {"response": self.myService.analyseRequest(args['html'], args['url'])}
+  File "<decorator-gen-1>", line 2, in analyseRequest
+  File "C:\Users\bianc\Desktop\ASET\FakeNews\ServerComponent\venv\lib\site-packages\prometheus_client\context_managers.py", line 66, in wrapped
+    return func(*args, **kwargs)
+  File "C:\Users\bianc\Desktop\ASET\FakeNews\ServerComponent\Services.py", line 24, in analyseRequest
+    result = self.analyseTwitterPost(html, url)
+  File "C:\Users\bianc\Desktop\ASET\FakeNews\ServerComponent\Services.py", line 33, in analyseTwitterPost
+    followers_number = float(TwitterAPI.getFollowers(TwitterAPI.getProfileName(url)).replace(",", ""))
+AttributeError: 'int' object has no attribute 'replace'
+INFO:werkzeug:127.0.0.1 - - [14/Dec/2020 19:59:42] "[35m[1mPOST / HTTP/1.1[0m" 500 -
