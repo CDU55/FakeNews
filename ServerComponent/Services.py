@@ -3,7 +3,6 @@ import prometheus_client as prom
 from Analysers.Factories import SocialMediaAnalysersFactory, NewsAnalysersFactory
 from Analysers.Handlers import NewsFilterSocialMediaHandler
 from Analysers.Models import AnalysisResult
-from DataLayer import ValidateDatabase
 from DataLayer.DataSetEntry import TwitterDataSetEntryUnlabeled
 from TextExtraction.APIs import TwitterAPI, TextAPI
 
