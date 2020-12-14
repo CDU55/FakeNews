@@ -18,7 +18,7 @@ class AnalysisService:
         self.newsFactory = NewsAnalysersFactory()
 
     @req_summary.time()
-    #@c.count_exceptions()
+    @c.count_exceptions()
     def analyseRequest(self, html, url):
         if url != "":
             result = self.analyseTwitterPost(html, url)
