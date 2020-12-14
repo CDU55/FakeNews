@@ -5,6 +5,7 @@ from Analysers.Handlers import NewsFilterSocialMediaHandler
 from Analysers.Models import AnalysisResult
 from DataLayer.DataSetEntry import TwitterDataSetEntryUnlabeled
 from TextExtraction.APIs import TwitterAPI, TextAPI
+from Analysers.SubjectRelevance import calculate_maximum_similarity_mean
 
 prom.start_http_server(8000)
 
@@ -46,7 +47,7 @@ class AnalysisService:
             grammar_index = (correct_words / words_number)
         else:
             grammar_index = 0
-        subject_relevance = 90
+        subject_relevance = calculate_maximum_similarity_mean(TwitterAPI.getDataFromTwitter(html))
         post = TwitterDataSetEntryUnlabeled(followers_number, verified, tweets_number, retweets, quote_tweets,
                                             likes_number,
                                             grammar_index, subject_relevance)
@@ -66,4 +67,3 @@ class AnalysisService:
         result = AnalysisResult()
         filterHandler.handle(request, result)
         return result
-

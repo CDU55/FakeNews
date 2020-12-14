@@ -24,3 +24,4 @@ langdetect~=1.0.8
 autocorrect~=2.2.2
 apis~=0.0.1
 nltk~=3.5
+dask

@@ -3,7 +3,8 @@ import string
 from langdetect import detect
 from autocorrect import Speller
 from nltk import sent_tokenize
-
+import nltk
+nltk.download('punkt')
 
 def getWordsNumber(text):
     if text == "ERROR404:Data not found":
@@ -66,7 +67,12 @@ def calculateNumber(number):
             number = number.replace('K', '000')
     return int(number)
 
+
 def getListOfSentences(text):
-    return sent_tokenize(text)
+    try:
+        result = sent_tokenize(text)
+        return result
+    except Exception as e:
+        print(e)
 
 # TODO: https://github.com/emilmont/pyStatParser

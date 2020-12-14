@@ -12,7 +12,7 @@ def get_mean(sentances_scores):
     return sum(sentances_scores.values()) / len(sentances_scores.values())
 
 
-def calculate_maximum_similarity(social_media_post_text, timeout=5):
+def calculate_maximum_similarity(social_media_post_text, timeout=10):
     start = time.time()
     max_sim = 0
     for current_headline in headlines:
@@ -21,8 +21,8 @@ def calculate_maximum_similarity(social_media_post_text, timeout=5):
             max_sim = current_sim
         current_time = time.time() - start
         if current_time > timeout:
-            return max_sim
-    return max_sim
+            return max_sim * 100
+    return max_sim * 100
 
 
 def calculate_maximum_similarity_mean(social_media_post_text, timeout=5):
@@ -39,20 +39,20 @@ def calculate_maximum_similarity_mean(social_media_post_text, timeout=5):
                 distance_each_sentence[sentence] = current_sim
         current_time = time.time() - start
         if current_time > timeout:
-            return get_mean(distance_each_sentence)
-    return get_mean(distance_each_sentence)
+            return get_mean(distance_each_sentence) * 100
+    return get_mean(distance_each_sentence) * 100
 
 
-start = time.time()
-print(calculate_maximum_similarity("Another HISTORIC breakthrough today! Our two GREAT friends Israel and the Kingdom "
-                                   "of Morocco have agreed to full diplomatic relations – a massive breakthrough for "
-                                   "peace in the Middle East!"))
-print(time.time() - start)
+#start = time.time()
+#print(calculate_maximum_similarity("Another HISTORIC breakthrough today! Our two GREAT friends Israel and the Kingdom "
+#                                   "of Morocco have agreed to full diplomatic relations – a massive breakthrough for "
+#                                   "peace in the Middle East!"))
+#print(time.time() - start)
 
-start = time.time()
-dist = calculate_maximum_similarity_mean(
-    "Another HISTORIC breakthrough today! Our two GREAT friends Israel and the Kingdom "
-    "of Morocco have agreed to full diplomatic relations – a massive breakthrough for "
-    "peace in the Middle East!")
-print(dist)
-print(time.time() - start)
+#start = time.time()
+#dist = calculate_maximum_similarity_mean(
+#    "Another HISTORIC breakthrough today! Our two GREAT friends Israel and the Kingdom "
+#    "of Morocco have agreed to full diplomatic relations – a massive breakthrough for "
+#    "peace in the Middle East!")
+#print(dist)
+#print(time.time() - start)
