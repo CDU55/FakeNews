@@ -1,0 +1,46 @@
+.body{
+  background: red;
+  margin: 0;
+  padding: 0;
+  border-radius: 15px;
+}
+
+.div{
+  margin: 0;
+  padding: 0;
+}
+.wrapper{
+        background: #FFA500;
+        width: 400px;
+        height: 150px;
+        padding: 30px;
+        border: 1px solid black;
+        /*border-radius: 15px;*/
+        color:white;
+        margin: 0;
+        border-radius: 15px;
+    }
+button {
+        background-color: black; /* Green */
+        border: none;
+        text-decoration: none;
+        color: white;
+        padding: 10px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        float: right;
+      }
+p{
+        border: 1px solid black;
+        padding: 10px;
+        background: #FFDAB9;
+        color: black;
+}
+ 
+#logs{
+  display: none;
+}
