@@ -189,13 +189,14 @@ def make_request_threads(request_count):
     return results,execution_time
 
 requests_number=int(sys.argv[1])
-results,time_elapsed=make_request(requests_number)
-print("One thread requests time for {} requests : {}".format(requests_number,time_elapsed))
+#results,time_elapsed=make_request(requests_number)
+#print("One thread requests time for {} requests : {}".format(requests_number,time_elapsed))
 results,time_elapsed=make_request_threads(requests_number)
 print("Multi thread requests time for {} requests : {}".format(requests_number,time_elapsed))
 success=0
 fail=0
 for result in results:
+    print(result.json())
     if result.status_code==200:
         success+=1
     else:
@@ -203,6 +204,5 @@ for result in results:
 
 print("Successful request : {}".format(success))
 print("Failed request : {}".format(fail))
-print(results[1].json())
 
 

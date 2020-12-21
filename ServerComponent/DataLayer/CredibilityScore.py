@@ -47,7 +47,7 @@ def get_verified_score(verified):
     if verified:
         return verified_weight
     else:
-        return verified_weight
+        return 0
 
 
 def get_post_score(followers_number, verified, tweets_number, retweets, quote_tweets, likes_number, grammar_index,

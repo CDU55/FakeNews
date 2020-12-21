@@ -1,0 +1,105 @@
+[
+  {
+    "Test entries": 250,
+    "Accuracy": 84.0,
+    "Test time": 71.4400691986084
+  },
+  {
+    "Test entries": 500,
+    "Accuracy": 80.4,
+    "Test time": 138.683034658432
+  },
+  {
+    "Test entries": 750,
+    "Accuracy": 82.13333333333334,
+    "Test time": 203.52094292640686
+  },
+  {
+    "Test entries": 1000,
+    "Accuracy": 81.5,
+    "Test time": 265.48247051239014
+  },
+  {
+    "Test entries": 100,
+    "Accuracy": 87.0,
+    "Test time": 25.027637004852295
+  },
+  {
+    "Test entries": 200,
+    "Accuracy": 80.0,
+    "Test time": 49.96341395378113
+  },
+  {
+    "Test entries": 300,
+    "Accuracy": 85.66666666666667,
+    "Test time": 76.34990358352661
+  },
+  {
+    "Test entries": 400,
+    "Accuracy": 85.5,
+    "Test time": 101.28941702842712
+  },
+  {
+    "Comment": "Increase dataset entries number"
+  },
+  {
+    "Test entries": 100,
+    "Accuracy": 83.0,
+    "Test time": 38.92440629005432
+  },
+  {
+    "Test entries": 200,
+    "Accuracy": 81.0,
+    "Test time": 76.06876635551453
+  },
+  {
+    "Test entries": 300,
+    "Accuracy": 85.33333333333334,
+    "Test time": 118.65112781524658
+  },
+  {
+    "Test entries": 400,
+    "Accuracy": 85.5,
+    "Test time": 165.21854281425476
+  },
+  {
+    "Test entries": 250,
+    "Accuracy": 81.2,
+    "Test time": 102.30590343475342
+  },
+  {
+    "Test entries": 500,
+    "Accuracy": 85.8,
+    "Test time": 223.54196524620056
+  },
+  {
+    "Test entries": 750,
+    "Accuracy": 83.86666666666667,
+    "Test time": 354.73156905174255
+  },
+  {
+    "Test entries": 1000,
+    "Accuracy": 84.7,
+    "Test time": 448.61080861091614
+  },
+  {
+    "Test entries": 500,
+    "Accuracy": 81.39999999999999,
+    "Test time": 172.0842423439026
+  },
+  {
+    "Test entries": 1000,
+    "Accuracy": 83.8,
+    "Test time": 363.4845826625824
+  },
+  {
+    "Test entries": 1500,
+    "Accuracy": 84.66666666666667,
+    "Test time": 573.4786870479584
+  },
+  {
+    "Test entries": 2000,
+    "Accuracy": 84.6,
+    "Test time": 5172.09996509552
+  }
+]

@@ -12,7 +12,7 @@ def get_mean(sentances_scores):
     return sum(sentances_scores.values()) / len(sentances_scores.values())
 
 
-def calculate_maximum_similarity(social_media_post_text, timeout=10):
+def calculate_maximum_similarity(social_media_post_text, timeout=5):
     start = time.time()
     max_sim = 0
     for current_headline in headlines:
