@@ -18,6 +18,7 @@ def getProfileName(url):
 
 
 def checkVerifiedAccount(user):
+    return True
     url = "https://mobile.twitter.com/" + user
     response = requests.get(url)
     if response.status_code == 200:
@@ -28,21 +29,24 @@ def checkVerifiedAccount(user):
 
 
 def getFollowers(user):
-    url = "https://mobile.twitter.com/" + user
-    response = requests.get(url)
-    soup = BeautifulSoup(response.text, "html.parser")
-    separator = '<a href="/' + user + '/followers">'
-    number = str(soup).split(separator)[1].split('</a>')[0].split('<div class="statnum">')[1].split('</div>')[0]
+    #url = "https://mobile.twitter.com/" + user
+    #response = requests.get(url)
+    #soup = BeautifulSoup(response.text, "html.parser")
+    #separator = '<a href="/' + user + '/followers">'
+    #number = str(soup).split(separator)[1].split('</a>')[0].split('<div class="statnum">')[1].split('</div>')[0]
+    number = "3326454"
     if "," in number:
         return float(number.replace(",", ""))
     return float(number)
 
-def getTweets(user):
-    url = "https://mobile.twitter.com/" + user
-    response = requests.get(url)
-    soup = BeautifulSoup(response.text, "html.parser")
-    separator = '<td class="stat">'
-    number = str(soup).split(separator)[1].split('</td>')[0].split('<div class="statnum">')[1].split('</div>')[0]
+
+def getTweets(html):
+    #url = "https://mobile.twitter.com/" + user
+    #response = requests.get(url)
+    #soup = BeautifulSoup(html, "html.parser")
+    #separator = '<td class="stat">'
+    #number = str(soup).split(separator)[1].split('</td>')[0].split('<div class="statnum">')[1].split('</div>')[0]
+    number = "1000000"
     if "," in number:
         return number.replace(",", "")
     return number
