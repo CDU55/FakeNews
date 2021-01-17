@@ -20,23 +20,23 @@ class AnalysisService:
 
     @req_summary.time()
     @c.count_exceptions()
-    def analyseRequest(self, html, url):
+    def analyse_request(self, html, url):
         if url != "":
-            result = self.analyseTwitterPost(html, url)
+            result = self.analyse_twitter_post(html, url)
             return result
         else:
             return "facebook"
             # call text extraction from fb
 
-    def analyseTwitterPost(self, html, url):
+    def analyse_twitter_post(self, html, url):
 
         handler = NewsFilterSocialMediaHandler()
         followers_number = TwitterAPI.getFollowers(TwitterAPI.getProfileName(url))
-        if TwitterAPI.checkVerifiedAccount(TwitterAPI.getProfileName(url)) :
+        if TwitterAPI.checkVerifiedAccount(TwitterAPI.getProfileName(url)):
             verified = 1
         else:
             verified = 0
-        tweets_number = float(TwitterAPI.getTweets(TwitterAPI.getProfileName(url)).replace(",", ""))
+        tweets_number = float(TwitterAPI.getTweets(html))
         retweets = TwitterAPI.getRetweets(html)
         quote_tweets = TwitterAPI.getQuoteTweets(html)
         likes_number = TwitterAPI.getLikes(html)
@@ -56,14 +56,14 @@ class AnalysisService:
         message = result.elements[0].validation_message
         return message
 
-    def analyseNewsArticle(self, request):
-        filterHandler = self.newsFactory.createNewsFilterHandler()
-        commonSenseHandler = self.newsFactory.createCommonSenseHandler()
-        factCheckHandler = self.newsFactory.createCommonSenseHandler()
-        inductiveHandler = self.newsFactory.createInductiveHandler()
-        filterHandler.set_next(commonSenseHandler) \
-            .set_next(factCheckHandler) \
-            .set_next(inductiveHandler)
+    def analyse_news_article(self, request):
+        filter_handler = self.newsFactory.createNewsFilterHandler()
+        common_sense_handler = self.newsFactory.createCommonSenseHandler()
+        fact_check_handler = self.newsFactory.createCommonSenseHandler()
+        inductive_handler = self.newsFactory.createInductiveHandler()
+        filter_handler.set_next(common_sense_handler) \
+            .set_next(fact_check_handler) \
+            .set_next(inductive_handler)
         result = AnalysisResult()
-        filterHandler.handle(request, result)
+        filter_handler.handle(request, result)
         return result

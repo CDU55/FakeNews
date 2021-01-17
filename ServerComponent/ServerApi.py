@@ -7,11 +7,13 @@ import Services
 app = Flask(__name__)
 api = Api(app)
 PrometheusMetrics(app)
-endpoints = ('/')
+endpoints = '/'
 
 server_request_args = reqparse.RequestParser()
-server_request_args.add_argument("html", type=str, help="The html with the news is required.", required=True)
-server_request_args.add_argument("url", type=str, help="The url of the news article is required.", required=True)
+server_request_args.add_argument("html", type=str,
+                                 help="The html with the news is required.", required=True)
+server_request_args.add_argument("url", type=str,
+                                 help="The url of the news article is required.", required=True)
 
 
 class ServerApi(Resource):
@@ -21,7 +23,7 @@ class ServerApi(Resource):
 
     def post(self):
         args = server_request_args.parse_args()
-        return {"response": self.myService.analyseRequest(args['html'], args['url'])}
+        return {"response": self.myService.analyse_request(args['html'], args['url'])}
 
     def get(self):
         return {"response": "Make the request with post method."}
